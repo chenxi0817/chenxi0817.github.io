@@ -9,20 +9,20 @@ const SITE_CONTENT = {
     nameEn: 'Yichen Yao',
     email: '22621037@zju.edu.cn',
     heroRoles: [
-      '浙江大学 · 人工智能研究所硕士生',
-      'Embodied AI / 3D Visual Grounding Researcher',
-      'AAAI 2026 一作论文',
+      '浙江大学 · 软件所硕士生',
+      'Computer Vision / 3D Visual Understanding',
+      '2029 届硕士毕业生',
       '让机器人真正理解三维世界',
     ],
     aboutParas: [
-      '我是姚懿宸，<strong>浙江大学人工智能研究所</strong>硕士（导师：宋明黎教授、刘振宇研究员），研究方向为 <span class="hl">具身智能与智能机器人</span> 中的三维视觉语言理解，重点关注机器人如何在真实三维场景中完成开放词汇的定位与决策。',
-      '围绕「<span class="hl">3D 具身理解 + 视觉定位 + 多模态语言建模</span>」形成了系统的研究路线：从复现 ScanRefer 三维指代表达理解工作，到构建基于 3DGS 与 VLM 的三维视觉定位系统，再到提出具身导航统一强化学习框架 <strong>UniRL</strong>（AAAI 2026 一作）并持续迭代，具备较为完整的科研训练与项目落地能力。',
-      '2027 届应届硕士毕业生，希望在具身智能、3D 视觉方向继续深耕；同时对 AIGC、视频理解、视频生成等方向抱有开放探索兴趣。',
+      '我是姚懿宸，<strong>浙江大学软件学院（软件所）</strong>硕士研究生，师从<span class="hl">朱建科教授</span>，2029 届毕业。研究与学习兴趣集中在 <span class="hl">计算机视觉与三维视觉理解</span>，关注如何让模型在真实三维场景中完成定位与决策。',
+      '本科毕业于<strong>浙江大学计算机科学与技术专业</strong>，具备扎实的工程与数理基础。围绕「<span class="hl">3D 具身理解 + 视觉定位 + 多模态语言建模</span>」完成了一系列科研项目：复现 ScanRefer 三维指代表达理解工作、构建基于 3DGS 与 VLM 的三维视觉定位系统等。',
+      '希望在计算机视觉、具身智能方向继续深耕；同时对 AIGC、视频理解、视频生成等方向抱有开放探索兴趣。',
     ],
     facts: [
-      { label: '研究方向', value: '3D Visual Grounding / Embodied AI' },
+      { label: '研究方向', value: 'Computer Vision / 3D Visual Understanding' },
       { label: '坐标', value: '杭州' },
-      { label: '求职状态', value: '2027 届应届' },
+      { label: '求职状态', value: '2029 届硕士应届' },
     ],
   },
 
@@ -76,12 +76,10 @@ const SITE_CONTENT = {
   projects: [
     {
       title: 'UniRL：具身导航统一强化学习框架',
-      subtitle: '3D 场景理解 · 具身导航 · 视觉语言模型（AAAI 2026 一作）',
-      badge: 'AAAI 2026 · 一作',
-      badgeStyle: 'gold',
+      subtitle: '3D 场景理解 · 具身导航 · 视觉语言模型（科研项目）',
       img: 'assets/img/projects/placeholder-unirl.svg',
       techTags: ['具身导航', '3D 场景理解', '强化学习', '视觉语言模型'],
-      desc: '提出「理解 → 预测 → 决策」闭环式导航框架，设计 3D-aware 统一目标建模，支持多类型指令与多形态平台，在 8 个 3D 具身导航基准测试上均实现 SOTA。',
+      desc: '参与构建「理解 → 预测 → 决策」闭环式导航框架，设计 3D-aware 统一目标建模，支持多类型指令与多形态平台，在多个 3D 具身导航基准测试上取得领先表现。',
       links: {
         code: 'https://github.com/chenxi0817', // TODO: 论文开源后替换为具体仓库
         paper: null,                             // TODO: arXiv / AAAI 页面链接
@@ -98,11 +96,10 @@ const SITE_CONTENT = {
     },
     {
       title: 'MUSE：音乐语义增强的多模态大模型',
-      subtitle: '音乐生成 · 多模态理解（EMNLP 2025 UNDER REVIEW，一作）',
-      badge: 'EMNLP 2025 · 一作',
+      subtitle: '音乐生成 · 多模态理解（科研项目）',
       img: 'assets/img/projects/placeholder-muse.svg',
       techTags: ['多模态大模型', 'Qwen-VL', 'Benchmark', '音乐理解'],
-      desc: '构建多模态音乐理解 Benchmark，提出基于 Qwen-VL、音乐语义增强的原生多模态统一模型 MUSE，实现音乐生成和理解上的 SOTA 表现。',
+      desc: '参与构建多模态音乐理解 Benchmark，探索基于 Qwen-VL、音乐语义增强的原生多模态统一模型 MUSE，提升音乐生成与理解效果。',
       links: { code: 'https://github.com/chenxi0817', paper: null, demo: null },
     },
     {
@@ -117,28 +114,16 @@ const SITE_CONTENT = {
 
   timeline: [
     {
-      period: '2024.09 – 2027.06',
+      period: '2026.09 – 2029.06',
       title: '浙江大学 · 硕士',
-      org: '人工智能 · 人工智能研究所',
-      detail: '具身智能与 3D 视觉语言理解方向，导师宋明黎教授、刘振宇研究员。一作发表 AAAI 2026（UniRL），一作投稿 EMNLP 2025（MUSE）。',
+      org: '软件学院（软件所）· 计算机技术',
+      detail: '师从朱建科教授，研究方向为计算机视觉与三维视觉理解，参与具身导航、三维视觉定位、多模态大模型等科研项目。',
     },
     {
-      period: '2026',
-      title: 'AAAI 2026 · 一作论文',
-      org: '学术里程碑',
-      detail: 'UniRL：面向具身导航的统一强化学习框架，8 个 3D 具身导航基准 SOTA。',
-    },
-    {
-      period: '2025',
-      title: 'EMNLP 2025 · 一作投稿',
-      org: '学术里程碑',
-      detail: 'MUSE：音乐语义增强的原生多模态统一模型（UNDER REVIEW）。',
-    },
-    {
-      period: '2020.09 – 2024.06',
-      title: '中国人民大学 · 本科',
-      org: '理科试验班（统计学）· GPA 3.48 / 4',
-      detail: '系统掌握概率论、数理统计、回归分析、多元统计分析与统计计算，形成扎实的数理与数据分析基础，支撑后续 AI 科研中的模型设计与实验分析。',
+      period: '2022.09 – 2026.06',
+      title: '浙江大学 · 本科',
+      org: '计算机科学与技术',
+      detail: '系统学习数据结构、操作系统、计算机组成原理、机器学习等课程，打下扎实的工程与数理基础。',
     },
   ],
 
