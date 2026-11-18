@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b1a"/><stop offset="1" stop-color="#111128"/>
+    </linearGradient>
+    <linearGradient id="ln1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <pattern id="gd1" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#94a3b8" stroke-opacity=".09" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg1)"/>
+  <rect width="1280" height="720" fill="url(#gd1)"/>
+  <circle cx="1040" cy="150" r="220" fill="#22d3ee" fill-opacity=".05"/>
+  <circle cx="220" cy="600" r="260" fill="#a855f7" fill-opacity=".06"/>
+  <rect y="714" width="1280" height="6" fill="url(#ln1)"/>
+  <text x="640" y="330" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="46" font-weight="700" fill="#e2e8f0">3DGS + VLM 三维视觉定位</text>
+  <text x="640" y="392" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="26" fill="#8b96ab">三维视觉定位系统 · OpenVLA · ScanNet++</text>
+  <text x="640" y="452" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#22d3ee" fill-opacity=".85">[ 项目截图占位 — 替换为 assets/img/projects/ 下的真实截图 ]</text>
+</svg>

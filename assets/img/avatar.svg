@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0d1c"/>
+      <stop offset="1" stop-color="#14142b"/>
+    </linearGradient>
+    <linearGradient id="letter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset=".5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="glowc" cx=".5" cy=".38" r=".7">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="180" cy="180" r="180" fill="url(#bg)"/>
+  <circle cx="180" cy="180" r="180" fill="url(#glowc)"/>
+  <g stroke="#a855f7" stroke-opacity=".18" stroke-width="1">
+    <circle cx="180" cy="180" r="128" fill="none"/>
+    <circle cx="180" cy="180" r="96" fill="none" stroke="#22d3ee" stroke-opacity=".16"/>
+  </g>
+  <text x="180" y="228" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="150" font-weight="700" fill="url(#letter)">Y</text>
+  <text x="180" y="272" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="22" letter-spacing="6" fill="#a5b0c2">YICHEN YAO</text>
+</svg>

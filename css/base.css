@@ -1,0 +1,133 @@
+/* ══════════════════════════════════════
+   base.css — 设计 tokens、reset、排版
+   ══════════════════════════════════════ */
+
+:root {
+  /* 背景层级 */
+  --bg-base: #07070f;
+  --bg-elev: #0d0d1c;
+  --bg-elev-2: #14142b;
+
+  /* 霓虹主色 */
+  --neon-cyan: #22d3ee;
+  --neon-purple: #a855f7;
+  --neon-blue: #6366f1;
+  --grad-neon: linear-gradient(120deg, #22d3ee, #6366f1, #a855f7);
+
+  /* 辉光 */
+  --glow-cyan: 0 0 12px rgba(34, 211, 238, .45);
+  --glow-purple: 0 0 16px rgba(168, 85, 247, .35);
+
+  /* 文字 */
+  --text-hi: #f1f5f9;
+  --text-mid: #a5b0c2;
+  --text-dim: #6b7280;
+
+  /* 描边 */
+  --border-soft: rgba(148, 163, 184, .14);
+
+  /* 布局 */
+  --nav-h: 72px;
+  --nav-h-scrolled: 60px;
+  --max-w: 1100px;
+  --radius: 14px;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --section-py: clamp(72px, 10vw, 120px);
+
+  /* 字体：仅英文走 webfont，中文用系统字体（避免加载巨大的 Noto Sans SC） */
+  --font-head: 'Space Grotesk', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-body: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+/* ── reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-mid);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
+
+::selection { background: rgba(34, 211, 238, .3); color: var(--text-hi); }
+
+/* ── 排版 ── */
+h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text-hi); line-height: 1.25; }
+
+.section-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: clamp(36px, 6vw, 56px);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-en {
+  display: block;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .35em;
+  background: var(--grad-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 6px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: 56px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--grad-neon);
+  box-shadow: var(--glow-cyan);
+}
+
+/* ── 工具 ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding-block: var(--section-py); position: relative; }
+
+.grad-text {
+  background: var(--grad-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 可访问性：仅屏幕阅读器可见 */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* 系统级减少动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

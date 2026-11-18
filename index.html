@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>姚懿宸 · 个人主页 | Embodied AI & 3D Vision</title>
+  <meta name="description" content="姚懿宸（Yichen Yao）的个人主页与作品集：浙江大学人工智能研究所硕士，研究方向为具身智能、3D 视觉语言理解与视觉定位，AAAI 2026 一作。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="姚懿宸 · 个人主页 | Embodied AI & 3D Vision">
+  <meta property="og:description" content="浙江大学人工智能研究所硕士 · 具身智能与 3D 视觉理解 · AAAI 2026 一作 · 作品集">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <header id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero" aria-label="返回顶部">YICHEN<span class="logo-dot">.YAO</span></a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" aria-label="主导航">
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#education">经历</a>
+        <a href="#contact">联系</a>
+        <a class="nav-icon" id="nav-github" href="https://github.com/chenxi0817" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════ Hero ═══════ -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting" data-reveal>Hi, I'm</p>
+        <h1 class="hero-name" data-reveal>姚懿宸<span class="hero-name-en">Yichen Yao</span></h1>
+        <p class="hero-role" data-reveal><span id="typewriter-text"></span><span class="tw-cursor" aria-hidden="true"></span></p>
+        <div class="hero-cta" data-reveal>
+          <a href="#projects" class="btn btn-primary">查看项目</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="向下滚动">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ═══════ About ═══════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title" data-reveal>关于我<span class="section-title-en">ABOUT ME</span></h2>
+        <div class="about-grid">
+          <div class="about-avatar" data-reveal>
+            <div class="avatar-ring"><img src="assets/img/avatar.svg" alt="姚懿宸头像" width="180" height="180"></div>
+          </div>
+          <div class="about-text" data-reveal style="--i:1">
+            <div id="about-paras"></div>
+            <ul id="about-facts" class="facts"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Skills ═══════ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title" data-reveal>技能<span class="section-title-en">SKILLS</span></h2>
+        <div id="skills-grid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════ Projects ═══════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title" data-reveal>项目作品<span class="section-title-en">PROJECTS</span></h2>
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════ Timeline ═══════ -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title" data-reveal>经历<span class="section-title-en">TIMELINE</span></h2>
+        <div id="timeline" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ═══════ Contact ═══════ -->
+    <section id="contact" class="section">
+      <div class="container contact-inner">
+        <h2 class="section-title" data-reveal>与我联系<span class="section-title-en">LET'S CONNECT</span></h2>
+        <p class="contact-sub" data-reveal style="--i:1">对具身智能、3D 视觉或科研合作感兴趣？欢迎随时联系。</p>
+        <div id="contact-actions" data-reveal style="--i:2"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p id="footer-copy"></p>
+      <p class="footer-note">Built with vanilla HTML / CSS / JS</p>
+      <button id="back-to-top" aria-label="回到顶部">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script defer src="js/content.js"></script>
+  <script defer src="js/particle-bg.js"></script>
+  <script defer src="js/cursor-glow.js"></script>
+  <script defer src="js/typewriter.js"></script>
+  <script defer src="js/tilt-card.js"></script>
+  <script defer src="js/scroll-reveal.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
